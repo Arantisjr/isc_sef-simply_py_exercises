@@ -13,13 +13,26 @@ def loyalty_program(amt):
     print(f'price to pay:\n {price}')
 # function if not a customer
 def not_customer(amt):
-    charge = amt * 0.25
+    charge = amt * 0.05
     price = amt + charge
     print(f'price to pay:\n {price}')
 
-def main_function(amt):
-    amt = input(int("Enter price:\n "))
+def main_function():
+    choice =   input("""enter the following
+        1: if a customer and buying at 10000frs and above\n
+        2: if a customer, buying at 10000frs and above and part of the loyalty program\n
+        3: if not a customer  
+          """)
+    amt = int(input('Enter price:\n'))
+    if choice == '1' and amt >= 10000:
+        twenty_percent(amt)
+    elif choice == '2 'and amt >= 10000:
+        loyalty_program(amt)
+    elif choice == '3' and amt < 10000:
+        not_customer(amt)
+    else:
+        print("Enter the correct format")
+  
 
 
-
-loyalty_program(10000)
+main_function()
