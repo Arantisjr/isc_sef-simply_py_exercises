@@ -1,3 +1,4 @@
-fruits = ['banana', 'mango', 'apple', 'pineapple', 'watermelon', 'avocado']
-for idx, fruit in enumerate(fruits, -2):
-    print(idx, fruit)
+a = ['Geeks', 'for', 'Geeks']
+b = enumerate(a)
+next_val = next(b); 
+print(next_val)
